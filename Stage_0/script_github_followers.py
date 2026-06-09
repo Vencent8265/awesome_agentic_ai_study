@@ -6,9 +6,10 @@ import requests
 url = "https://api.github.com/users/torvalds"
 response = requests.get(url)
 
-#2.解析JSON响应
+#2.解析JSON响应,将返回的json值存储为字典data
 data = response.json()
 print(data)
 
 #3.打印followers数量
 print(f"Linus Torvalds 的 followers 数量：{data['followers']}")
+print(f"Linus Torvalds 的 公司名是：{data['company']}")
