@@ -17,7 +17,7 @@ token = os.getenv("GITHUB_TOKEN")
 print(f"token是否加载：{token}")
 headers = {"Authorization":f"Bearer {token}"}
 response_with_auth = requests.get(url,headers=headers)
-print("完整报错：",json.dumps(response_with_auth.json(),indent=2,ensure_ascii=False))  # 加这行看完整报错
+print("完整报错：\n",json.dumps(response_with_auth.json(),indent=4,ensure_ascii=False))  # 加这行看完整报错
 
 print(f"带token状态码：{response_with_auth.status_code}")
 print(f"登陆用户：{response_with_auth.json()['login']}")
