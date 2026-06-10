@@ -1,0 +1,8 @@
+app:
+  debug: false
+  name: awesome_agentic_ai
+  verison: 1.1.0
+  version: 1.0.0
+database:
+  host: localhost
+  port: 5432
